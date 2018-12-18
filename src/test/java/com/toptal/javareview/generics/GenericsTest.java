@@ -28,5 +28,7 @@ public class GenericsTest {
         Box<Integer> integerBox = rawBox;
 
         System.out.println(integerBox.get()); //will print "test"
+
+        int sum = 1 + integerBox.get(); //ClassCastException
     }
 }

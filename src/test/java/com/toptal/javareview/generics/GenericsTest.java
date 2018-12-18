@@ -3,6 +3,7 @@ package com.toptal.javareview.generics;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class GenericsTest {
 
@@ -29,6 +30,8 @@ public class GenericsTest {
 
         System.out.println(integerBox.get()); //will print "test"
 
-        int sum = 1 + integerBox.get(); //ClassCastException
+        assertThrows(ClassCastException.class, () -> {
+            int sum = 1 + integerBox.get(); //ClassCastException
+        });
     }
 }

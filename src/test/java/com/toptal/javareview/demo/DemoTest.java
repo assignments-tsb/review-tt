@@ -12,4 +12,9 @@ public class DemoTest {
 
         assertEquals(0, demo.getSomething());
     }
+
+    @Test
+    void toptalInterview() {
+        System.out.println("Hello World");
+    }
 }
